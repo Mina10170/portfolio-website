@@ -1,83 +1,238 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html>
+
 <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="utf-8">
-	<title>My First Web page</title>
-	<link rel="shortcut icon" type="text/css" href="http://wikipedia.com/static/favicon/wikipedia.ico ">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Mina Morkos - Work</title>
+  <link rel="shortcut icon" href="./img/cell-division.png" type="image/png">
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Glory&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="css/styles.css"> -->
   <link rel="stylesheet" type="text/css" href="css/style.production.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+<!-- to add for this page: - Work -->
+
 <body>
-<!-- Header including the logo and the main navigation -->
-<header class="page-header">
-   <!-- Add Logo here -->
-   <img src="img/Webdesign.png" width="200" height="70" alt="logo" class="page-header__item">
-   <nav class="main-navigation page-header__item">
-      <ul role="menubar" class="navigation-list">
-         <li role="presentation">
-            <a href="index.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Home</a>
-         </li >
-         <li role="presentation">
-            <a href="about.html" role="menuitem" class="navigation-list__item">About</a>
-         </li>
-         <li role="presentation">
-            <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
-         </li>
-         <li role="presentation">
-            <a href="work.html" role="menuitem" class="navigation-list__item">Work</a>
-         </li>
+
+  <header class="page-header">
+    <img src="./img/cell-division.png" alt="logo" class="page-header__item">
+    <nav class="main-navigation page-header__item">
+      <ul role="menubar" class="navigation-list circleBehind">
+        <li role="presentation">
+          <!-- prevents screen readers from reading out that its a list -->
+          <a href="index.html" role="menuitem" class="navigation-list__item">Home</a>
+        </li>
+        <li role="presentation">
+          <a href="about.html" role="menuitem" class="navigation-list__item">About me</a>
+        </li>
+        <li role="presentation">
+          <a href="work.html" role="menuitem" class="navigation-list__item navigation-list__item--active">Work</a>
+        </li>
+        <li role="presentation">
+          <a href="contact.html" role="menuitem" class="navigation-list__item">Contact</a>
+        </li>
       </ul>
-   </nav>
-</header>
-  <!-- Main content -->
-<section>
-   <h1>Work</h1>
-   <div class="grid">
-      <!-- Grid items will live here -->
-      <div class="grid__item">
-   <h2>Mobile web app</h2>
-   <p>
-      Within this project, I was responsible for the frontend. It’s written in React.js. Additionally, I've created the HTML and CSS templates.
-   </p>
-   <a href="#">See project on GitHub</a>
-</div>
-      <div class="grid__item">
-   <h2>Native MacoS application</h2>
-   <p>
-      Within this project, I was responsible for the frontend. It’s written in JavaFx.
-   </p>
-   <a href="#">See project on GitHub</a>
-   </div>
-      <div class="grid__item">
-   <h2>Node.js pdf generation</h2>
-   <p>
-      Within this project, I created a service that generates pdfs out of webpages with the help of node.js server.
-   </p>
-   <a href="#">See project on GitHub</a>
-</div>
-      <div class="grid__item">
-   <h2>Styleguide for portfolio page</h2>
-   <p>
-      Here you can find the styleguide I have created for this portfolio page. it was created with the livingstyleguide gem and grunt.
-   </p>
-   <a href="#">See styleguide</a>
-</div>
-</div>
-</section>
-<!-- Footer with links to social media profiles -->
-    <footer class="page-footer">
-  <p>Find me on</p>
-     <div class="social-media">
-  <!-- Github logo -->
-  <img src="img/github_icon.svg" alt="github">
-  <!-- Twitter logo -->
-  <img src="img/twitter_icon.svg" alt="twitter">
-  <!-- LinkedIn logo -->
-  <img src="img/linkedin_icon.svg" alt="linkedin">
-</div>
-  <script src="js/tota11y.min.js"></script>
-	</footer>
+    </nav>
+  </header>
+  <!-- difference in the header between the pages: navigation-list__item--active -->
+
+  <main>
+    <section>
+      <h1 class="aligncenter">Work</h1>
+      <p class="aligncenter">This is a selection of my projects as a web developer. Most of them are study projects,
+        created during the Fullstack Webdeveloper course @CarrerFoundry.</p>
+      <p class="aligncenter">For the study projects I also worked with Kanban boards, user stories, user flows and
+        architectural diagrams.</p>
+      <p class="aligncenter">More details about the features, technologies, etc. of each project can be found in the
+        respective readme file on GitHub.</p>
+      </br>
+
+      <div class="project-grid">
+        <div class="project-grid__item">
+          <h2>Portfolio website</h2>
+          <p>This started as a static website to learn HTML and CSS, but turned into a full grown portfolio website.</p>
+          <p>For practice reasons I chose to refrain from rebuilding it using librarys or build tools, so every line of
+            code here is hand-written.</p>
+          <p class="no-bottom-padding">Technologies:</p>
+          <ul class="no-top-gap">
+            <li>CSS basics like float, flexbox, grid, variables, animations</li>
+            <li>HTML basics like forms, tables, header, footer</li>
+            <li>Full responsiveness</li>
+            <li>Full accessibility</li>
+          </ul>
+          <div class="aligncenter">
+            <a href="https://github.com/Mina10170/portfolio-website" target="_blank"
+              rel="noopener noreferrer">Portfolio website on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>Meet app</h2>
+          
+          <p>This app displays events in different cities which are fetched from Google Calendar API.</p>
+          <p>The study goal was to learn about PWAs, test-driven-development (TDD), serverless functions, OAuth (a
+            mechanism to log into an app with your google account), performance monitoring and how to draw pretty
+            charts.</p>
+          <p>PWA (progressive web application) means it is responsive, available offline, cross-platform and can be
+            added to the home screen.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>Show/hide event details</li>
+            <li>Filter by city name</li>
+            <li>Choose number of events</li>
+            <li>Chart 1: Number of upcoming events per city</li>
+            <li>Chart 2: Popularity of topics</li>
+          </ul>
+          <p>Built with CRA (CreatReactApp), following the TDD (test driven development) approach.</p>
+          <p>Main technologies used: React, CSS, serverless (AWS lambda), OAuth (Google Cloud Console), Axios, Recharts,
+            Jest (Enzyme, Cucumber, Puppeteer), Atatus (performance monitoring)</p>
+          <div class="aligncenter">
+            <a href="https://mina10170.github.io/meet/" target="_blank" rel="noopener noreferrer">MeetApp live
+              demo</a></br>
+            <a href="https://github.com/Mina10170/meet" target="_blank" rel="noopener noreferrer">MeetApp on
+              GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>My Flix Angular client</h2>
+         
+          <p>MY Flix Angular client is a library of movements from various styles and traditions, with descriptions/cues and video
+            sources.</p>
+          <p>For the myflix study project I created an API including a non-relational database, as well as two different
+            frontend clients (Angular and React).</p>
+          <p>This is the Angular client - A single-page, responsive web application (SPA), using Material design.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>View a list of all moves</li>
+            <li>See details for each move, style or source</li>
+            <li>User registration and login</li>
+            <li>Update profile (username, password, email, birthday)</li>
+            <li>Users can add to add remove a move to/from their list of favorites</li>
+            <li>Users can delete their account</li>
+          </ul>
+          <p>Main technologies used: TypeScript, Angular, Angular-Material, CSS, TypeDoc for documentation, hosting on
+            GitHub-pages.</p>
+          <div class="aligncenter">
+            <a href="https://mina10170.github.io/myFlix-Angular-client" target="_blank" rel="noopener noreferrer">My FLix
+              Angular live demo</a></br>
+            <a href="https://github.com/Mina10170/myFlix-Angular-client" target="_blank" rel="noopener noreferrer">My Flix
+              Angular client on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>My Flix React client</h2>
+          
+          <p>This is the React-based frontend - A single-page, responsive web application (SPA), built with React
+            (including a number of additional modules), following the MVC design pattern.</p>
+          <p>For general info about myFlix see the Angular client.</p>
+          <p>Basic features: see Angular client. The React version additionally has thorough form validation and a
+            search function.</p>
+          <p>Main technologies used: JavaScript, React, React Bootstrap, React Redux, Axios, Parcel, PropTypes, Netlify
+            hosting.</p>
+          <div class="aligncenter">
+            
+            <a href="https://github.com/Mina10170/myFlix-client" target="_blank" rel="noopener noreferrer">My Flix React
+              client on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>Movie backend (API)</h2>
+          
+          <p>This is the REST API and a non-relational database for myFlix.</p>
+          <p>For general info about myFlix see the Angular client.</p>
+          <p>The study goals here were to learn about NodeJS (incl. a number of packages), databases (SQL and NoSQL) and
+            APIs in general.</p>
+          <p>Main technologies used: Javascript, non-relational DB on MongoDB Atlas, App hosted on
+            Heroku, Postman (API enepoint testing), node.js (Express, Morgan, bodyParser, mongoose, CORS, Passport,
+            bcrypt), JSDoc for documentation.</p>
+          <div class="aligncenter">
+            <a href="https://github.com/Mina10170/movie_api" target="_blank" rel="noopener noreferrer">myFlix
+              (API) on GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>Chat app</h2>
+          
+          <p>A chat app for mobile devices (Android and iOS) created with React Native.</p>
+          <p>The study goals here were to learn how to develop and test cross-platform native apps.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>Enter username</li>
+            <li>Choose background color</li>
+            <li>Send and receive messages</li>
+            <li>Share pictures from the devices gallery</li>
+            <li>Take and share photos</li>
+            <li>Share location</li>
+            <li>See past messages even while offline</li>
+          </ul>
+          <p>Main technologies used: JavaScript, React Native, Android Studio, Expo, Google Firebase.</p>
+          <div class="aligncenter">
+            <a href="https://github.com/Mina10170/Chat-App" target="_blank" rel="noopener noreferrer">Chat app on
+              GitHub</a>
+          </div>
+        </div>
+
+        <div class="project-grid__item">
+          <h2>Pokedéx app</h2>
+         
+          <p>An app to show a list of Pokemon from a public API.</p>
+          <p class="no-bottom-padding">Features:</p>
+          <ul class="no-top-gap">
+            <li>Load Pokemon data from a public external API</li>
+            <li>Render a button for each Pokemon</li>
+            <li>Open a modal when button is clicked, to show details about the Pokemon</li>
+            <li>Filter bar to search Pokemon by name</li>
+          </ul>
+          <p>The study goals were to learn DOM manipulation with JavaScript, jQuery, styling with Bootstrap, and code
+            optimization with linters and minfiers.</p>
+          <div class="aligncenter">
+            <a href="https://mina10170.github.io/simple-js-app/" target="_blank" rel="noopener noreferrer">Pokedéx live
+              demo</a></br>
+            <a href="https://github.com/Mina10170/simple-js-app" target="_blank" rel="noopener noreferrer">Pokedéx on
+              GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <p>Connect with me</p>
+    <div class="social-media">
+      <a class="circle-link" href="tel:+4917630117663" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Phone_icon.svg" class="icon" alt="Phone symbol"></a>
+      <a class="circle-link" href="mailto:mina10170@hotmail.com?subject=WebDev%20contact" target="_blank"
+        rel="noopener noreferrer">
+        <img src="img/Icons/Email_icon.svg" class="icon" alt="Email symbol"></a>
+      
+      <a class="circle-link" href="https://wa.me/4917630117663" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Whatsapp_logo.svg" class="icon" alt="Whatsapp logo"></a>
+      <a class="circle-link" href="skype:mina10170" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/Skype_logo.svg" class="icon" alt="Skype logo"></a>
+      <a class="circle-link" href="https://github.com/Mina10170" target="_blank" rel="noopener noreferrer">
+        <img src="img/Icons/github_logo.svg" class="icon" alt="Github logo"></a>
+      <a class="circle-link" href="www.linkedin.com/in/mina10170" target="_blank"
+        rel="noopener noreferrer"><img src="img/Icons/linkedin_logo.svg" class="icon" alt="LinkedIn logo"></a>
+      <a class="circle-link" href="https://www.xing.com/profile/Mina_Morkos2" target="_blank"
+        rel="noopener noreferrer"><img src="img/Icons/Xing_logo.svg" class="icon" alt="Xing logo"></a>
+      <a class="circle-link" href="https://twitter.com/EngMinaMorkos" target="_blank" rel="noopener noreferrer"><img
+          src="img/Icons/Twitter_logo.svg" class="icon" alt="Twitter logo"></a>
+      
+    </div>
+  </footer>
+
+  <!-- <script src="js/tota11y.min.js"></script> -->
 </body>
+
 </html>
